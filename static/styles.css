@@ -1,0 +1,57 @@
+*{
+	font-family: sans-serif;
+}
+#top{
+	border-bottom: 1px solid black;
+	width: 90%;
+}
+input, textarea{
+	display: block;
+	margin-bottom: 2em;
+}
+textarea{
+	width: 60%;
+	height: 10em;
+}
+h5 {
+	font-weight: normal;
+	text-transform: uppercase;
+	margin: .1em;
+}
+.request {
+	margin-top: 6%;
+}
+#post {
+	background-color: #4CAF50;
+	border: none;
+	color: white;
+	padding: .5em .8em;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 1em;
+}
+#post:hover, .post2:hover {
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.post2 {
+	background-color: #008CBA;
+	border: none;
+	color: white;
+	padding: .5em .8em;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 1em;
+}
+#errors {
+	color: red;
+	font-size: 2em;
+}
+h2 {
+	padding-bottom: .5em;
+}
+#requests, h2 {
+	border-bottom: .2em solid black;
+	width: 70%;
+}
