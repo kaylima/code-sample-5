@@ -12,4 +12,4 @@ module.exports = (function(app) {
 	app.post('/comment/:id', function (req, res) {
 		comments.create(req, res);
 	})
-})
+});

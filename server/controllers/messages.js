@@ -4,7 +4,7 @@ var Message = mongoose.model('Message');
 module.exports = {
 	show: function(req, res) {
       Message.find({}, false, true).populate('_comments').exec(function(err, messages){
-   	      res.render('index.ejs', {messages: messages});
+   	   res.render('index.ejs', {messages: messages});
    	});
 	},
 	create: function(req, res) {

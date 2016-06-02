@@ -1,19 +1,12 @@
 {
   "name": "kay_rossio_app",
   "version": "1.0.0",
-  "description": "",
+  "description": "Code sample for CrownPeak",
   "author": "Kay Rossio",
-  "engines": {
-     "node": "6.2.0",
-     "npm": "3.8.9"
-  },
-  "scripts": {
-    "start": "node server.js"
-  },
   "dependencies": {
-    "body-parser": "^1.15.0",
-    "ejs": "^2.4.1",
-    "express": "^4.13.4",
-    "mongoose": "^4.4.12"
+     "body-parser": "^1.15.0",
+     "ejs": "^2.4.1",
+     "express": "^4.13.4",
+     "mongoose": "^4.4.12"
   }
 }
