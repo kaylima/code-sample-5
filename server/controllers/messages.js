@@ -8,7 +8,7 @@ module.exports = {
    	});
 	},
 	create: function(req, res) {
-      var newMessage = new Message({name: req.body.name, message: req.body.message});
+      var newMessage = new Message({name: req.body.name, delivery_date: req.body.delivery_date, location: req.body.location});
    	newMessage.save(function(err){
    		if(err){
    			console.log(err);

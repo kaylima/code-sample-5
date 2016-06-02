@@ -12,36 +12,38 @@
 	  </script>
 </head>
 <body>
-	<h1>Request Ice Cream to Be Delivered</h1>
-	<form action="/message" method="post">
-		<p>Who are you?</p> <input type="text" name="name" placeholder="Your name">
-		<p>When do you want icecream?</p> <input type="text" id="datepicker" name="message" placeholder="Choose a date"></input>
-		<input id="post" type="submit" value="Submit">
-	</form>
-	<% if(typeof(errors) != 'undefined' ) { %>
-	   <% for (var x in errors) { %>
-	   <div id="errors">
-			<%= errors[x].message %>
-			<%= errors[x].comment %>
-		</div>
-	   <% } %>
- 	<% } else { %>
-	<h2>Ice Cream Requests:</h2>
- 		<div>
-			<% for(x in messages) { %>
-				<div id="requests">
-					<h4><%= messages[x].name %> wants icecream on <%= messages[x].message %>.</h4>
-						<h4>Requested Flavor(s):</h4>
-						<% for (y in messages[x]._comments) { %>
-							<h5><%= messages[x]._comments[y].text %></h5>
-						<% } %>
-					<form action=<%="/comment/" + messages[x]._id %> method="post">
-						<p class="flavor"><%= messages[x].name %>, what ice cream flavor would you like on <%= messages[x].message %>? </p><input type="text" class="comment_text" name="comment" placeholder="Request a flavor"></input>
-						<input class="post2" type="submit" value="Submit">
-					</form>
-				</div>
-			<% } %>
-		</div>
-	<% } %>
+	<div id="container">
+		<h1>Request Ice Cream to be Delivered:</h1>
+		<form action="/message" method="post">
+			<p>Who are you?</p> <input type="text" name="name" placeholder="Your name"></input>
+			<p>When should we deliver your ice cream?</p> <input type="text" id="datepicker" name="delivery_date" placeholder="Choose a date"></input>
+			<p>Where should we deliver it?</p> <input type="text" id="location" name="location" placeholder="your location"></input>
+			<input id="post" type="submit" value="Submit">
+		</form>
+		<% if(typeof(errors) != 'undefined' ) { %>
+		   <% for (var x in errors) { %>
+		   <div id="errors">
+				<%= errors[x].message %>
+			</div>
+		   <% } %>
+	 	<% } else { %>
+		<h2>Ice Cream Requests:</h2>
+	 		<div>
+				<% for(x in messages) { %>
+					<div id="requests">
+						<h3><%= messages[x].name %> wants ice cream on <%= messages[x].delivery_date %>, delivered to <%= messages[x].location %>.</h3>
+							<h4>Requested Flavor(s):</h4>
+							<% for (y in messages[x]._comments) { %>
+								<h5><%= messages[x]._comments[y].text %></h5>
+							<% } %>
+						<form action=<%="/comment/" + messages[x]._id %> method="post">
+							<p class="flavor"><%= messages[x].name %>, what ice cream flavor would you like on <%= messages[x].message %>? </p><input type="text" class="comment_text" name="comment" placeholder="type a flavor"></input>
+							<input class="post2" type="submit" value="Submit">
+						</form>
+					</div>
+				<% } %>
+			</div>
+		<% } %>
+	</div>
 </body>
 </html>
