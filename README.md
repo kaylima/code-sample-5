@@ -12,4 +12,6 @@ This needs to be somewhat robust, throwing some kind of error if a template uses
 
 Why make an appointment for something dreadful (like going to the dentist), when you could request ice cream instead?!
 
+Demo available here: http://52.39.147.91/
+
 This application uses JavaScript, Express, EJS for templating, Node.js, Mongoose and responsive HTML/CSS.
