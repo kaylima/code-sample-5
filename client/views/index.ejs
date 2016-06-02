@@ -20,7 +20,10 @@
 	</form>
 	<% if(typeof(errors) != 'undefined' ) { %>
 	   <% for (var x in errors) { %>
-	   <div id="errors"><%= errors[x].message %></div>
+	   <div id="errors">
+			<%= errors[x].message %>
+			<%= errors[x].comment %>
+		</div>
 	   <% } %>
  	<% } else { %>
 	<h2>Ice Cream Requests:</h2>

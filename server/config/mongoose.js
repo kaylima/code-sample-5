@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 var fs = require('fs');
 var path = require('path');
 
-mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/ice_cream');
+mongoose.connect('mongodb://localhost/ice_cream');
 
 var models_path = path.join(__dirname, './../models');
 
