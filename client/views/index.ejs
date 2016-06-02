@@ -37,7 +37,7 @@
 								<h5><%= messages[x]._comments[y].text %></h5>
 							<% } %>
 						<form action=<%="/comment/" + messages[x]._id %> method="post">
-							<p class="flavor"><%= messages[x].name %>, what ice cream flavor would you like on <%= messages[x].message %>? </p><input type="text" class="comment_text" name="comment" placeholder="type a flavor"></input>
+							<p class="flavor"><%= messages[x].name %>, what ice cream flavor would you like on <%= messages[x].delivery_date %>? </p><input type="text" class="comment_text" name="comment" placeholder="type a flavor"></input>
 							<input class="post2" type="submit" value="Submit">
 						</form>
 					</div>
