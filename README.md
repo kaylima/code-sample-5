@@ -1,4 +1,4 @@
-# CrownPeak Coding Sample - Exercise 5
+# Coding Sample
 
 ## Instructions
 
